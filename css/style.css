@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;0,900;1,500&display=swap');
+
+
+body {
+    background-color: #fefefe;
+    color: #286EF1;
+}
+
+h1 {
+    text-align: center;
+}
+
+.weatherNav {
+    position: relative;
+    display: flex;
+    margin: 0 0 10px 0;;
+    justify-content: space-between;
+    gap: 10px;
+    z-index: auto;
+}
+
+.weather-profile{
+    margin: 5px 0 0 0;
+}
+
+.container {
+    display: flex;
+    position: relative;
+}
+
+.tileContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+.weather-content {
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+    width: auto;
+    align-content: center;
+}
+
+#weather-icon {
+    margin:10px 0 10px 10px;
+    background-image: url("../assets/Icons/rain.svg");
+    background-size:contain;
+    /* height: 100%; */
+    min-width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.swimming-icon {
+    margin: 10px 0 10px 10px;
+    min-width: 40px;
+    height: 40px;
+}
+
+#average-beaches-temp {
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+    width: auto;
+    align-content: center;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+    background: #FEFEFE;
+}
+
+#app {
+    width: auto;
+}
+
+header {
+    height: 200px;
+    width: 500vw;
+}
+
+.profile-nav {
+    display: flex;
+}
+
+topNav {
+    background-color: #FEFEFE; 
+}
+
+/* menu*/ 
+
+.weatherIcon{
+    margin: 60px;
+}
+
+.img {
+    width: 95%;
+    height: 100%;
+}
+
+.availability-container {
+    display: flex;
+}
+
+.docks-container {
+    display: flex;
+}
+
+.book-bike-btn {
+    border-radius: 5px;
+    height: 52px;
+    width: 208px;
+    background-color: #286EF1;
+    color: #FEFEFE;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.menu {
+    position: relative;
+    z-index: 4;
+    background-image: url(../assets/Icons/wavyheader.svg);
+    background-repeat: no-repeat;
+    width: 100vw;
+}
+
+.menu-small {
+    position: relative;
+    z-index: 4;
+    background-image: url(../assets/Icons/wavyheaderSmall.svg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: auto;
+}
+
+.hamburger {
+    display: block;
+    padding: 10px;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.settings{
+    border: none;
+}
+
+.imgLogo {
+    width: 50px;
+    height: 70px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.close {
+    display: block;
+    width: 30px;
+    margin: 20px;
+}
+
+.close-icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.close2 {
+    position: absolute;
+    margin: 10px;
+}
+
+#close-pop {
+    display: block;
+    border-style: none;
+    margin: 5px;
+    background-color: #fefefe;
+}
+
+.pop-up-box {
+    height: 225px;
+    width: 90%;
+    margin: 0 5%;
+    position: absolute;
+    bottom: 0px;
+    background-color: #FEFEFE;
+    z-index: 400;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popupMenu {
+    margin: 0 0 0 70px;
+}
+
+.station-popup {
+    padding: 102px 250px 24px 90px;
+}
+
+.station-header {
+    text-align: left;
+    color: black;
+    margin: 0 0 0 70px;
+    
+}
+
+.address-box {
+    text-align: left;
+    margin: 8px 30px 0 70px;
+    color: black;
+}
+
+.content-box {
+    margin: 20px 0 20px 70px;
+}
+
+.content-stations {
+    margin: 13px 0 13px 10px;
+    color: black;
+}
+
+.bike-station-icon {
+    margin: 3px 0 0 17px;
+}
+
+.docks-station-icon {
+    margin: 3px 0 0 23px;
+}
+
+.menuNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#286EF1;
+    color: #FEFEFE;
+    width: 80vw;
+    height: 100vh;
+    z-index: 400;
+}
+
+.menuNav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.menu-bar{
+    display: flex;
+    width: 100vw;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.slide-in{
+    animation-name: slideIn;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+}
+
+.slide-out{
+    animation-name: slideOut;
+    animation-duration: 0.3s;
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-100vw);
+        display: none;
+    }
+    to {
+        transform: translate(0px);
+        display: block;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translate(0px);
+        display: block;
+    }
+    to {
+        transform: translate(-100vw);
+        display: none;
+    }
+}
+
+main ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+main ul li {
+    color: #FEFEFE;
+    background-color: #286EF1;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+
+.white-400 {
+    background-color: #FEFEFE;
+    color: black;
+}
+
+.white-header-text {
+    color: #FEFEFE;
+    text-align: center;
+    margin: 20px;
+}
+
+.black-400 {
+    background-color: black;
+    color: white;
+}
+
+.blue-500 {
+    background-color: #286EF1;
+    color: #FEFEFE;
+}
+
+.blue-400 {
+    background-color: #4A4DE7;
+    color: #FEFEFE;
+}
+
+.blue-300 {
+    background-color: #7EA6F4;
+    color: #FEFEFE;
+}
+
+
+
+
+.h1-700-40px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.h1-500-40px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.h1-400-40px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.h1-200-40px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 2.5rem;
+}
+
+.h2-700-30px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.875rem;
+}
+
+.h2-500-30px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.875rem;
+}
+
+.h2-400-30px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.875rem;
+}
+
+.h2-200-30px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 1.875rem;
+}
+
+.h3-700-20px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.h3-500-20px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.h3-400-20px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.h3-200-20px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 1.25rem;
+}
+
+.h4-700-18px-oj {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #252525;
+
+}
+
+.h4-700-18px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #FEFEFE;
+}
+
+.h4-500-18px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.h4-400-18px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: #FEFEFE;
+}
+
+.h4-200-18px {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 1.125rem;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.marker {
+    display: block;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url(../assets/Icons/stationsV02.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.marker:before {
+    content: attr(availability);
+    color: #286EF1;
+    font-size: 16px;
+    position: absolute;
+    top: 7px;
+    left: 11px;
+}
+
+.marker-active:before {
+    content: attr(availability);
+    color: #fff;
+    font-size: 16px;
+   
+}
+
+.marker-active {
+    display: block;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url(../assets/Icons/bikesActive.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.menu-space {
+    margin: 10px;
+}
+
+.menu-space li {
+    border: none;  
+}
+
+.box-card {
+    width: 270px;
+    height: 57px;
+    border-color: #005FC9;
+    border-style: solid;
+    text-align: center;
+    padding: 15px;
+    margin: -2px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border: none;
+}
+
+.card2 {
+    width: 40%;
+    height: 260px;
+    margin: 18px;
+    padding: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.05)
+
+}
+
+.card-body {
+    padding: 20px 0 20px 0;;
+}
+
+.card-title {
+    padding: 0 0 20px 0;
+    height: 50px;
+}
+
+.card-text {
+    height: 20px;
+    padding: 0 0 10px 0;
+    color: #252525;
+}
+
+.card-img-top {
+    margin: -10px;
+}
+
+.button-container{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slide-content {
+    visibility: hidden;
+    width: 0;
+}
+
+.active {
+    visibility: visible;
+    width: 250px;
+}
+
+.next-btn{
+    position: absolute;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin: 15px 0 0 0;
+    justify-content:flex-end;
+    background-color: transparent;
+}
+
+.error {
+    background-color: red;
+}
+
+.onboarding-container {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.Onboarding-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 103px;
+}
+
+.blue-logo {
+    display: block;
+    margin: 50px auto;
+}
+
+.wrap{
+    width: 30%;
+    position: relative;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+ .search {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 3px 8px;
+    margin: 20px;
+    justify-content: space-between;
+    gap: 10px;
+    z-index: auto;
+    width: 326px;
+    height: 30px;
+    border: 1px solid #286EF1;
+    border-radius: 8px;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    background: transparent;
+    border: none;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  
+  .name-profile {
+      text-align: center;
+      margin: 20px;
+      color: #252525;
+  }
+
+.toggleBox {
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    text-align: center;
+    margin: 10px;
+    color: #252525;
+}
+
+.suggestions li {
+    width: 100%;
+    background-color: #fefefe;
+    border-bottom: 2px;
+    border-color: #252525;
+}
+
+  

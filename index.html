@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"> -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/mapbox-gl-geocoder.css" rel="stylesheet">
+    
+    <title>Oslo by sykkel</title>
+  </head>
+  <body>
+
+    <header class="menu-small">
+      <div role="menubar" class="menu-bar">
+          <button class="hamburger" role="menu">
+              <img class="img" src="./assets/Icons/hamburger-white.svg" alt="Hamburger meny">
+          </button>
+          <a href="map.html">
+              <img class="imgLogo" src="assets/Icons/logo-white.svg" alt="Ride logo">
+          </a>
+      </div>
+  
+  </header>
+
+  <div class="profile-nav"> 
+      <nav class="menuNav hidden"> 
+          <ul class="menu-space">
+              <li class="close"><img class="close-icon" src="./assets/Icons/close.svg" alt="Ikon for å lukke hamburger meny"></li>
+              <a href="profile.html" class="link"><li class="box-card h4-400-18px">Din profil</li></a>
+              <a href="#" class="link"><li class="box-card h4-400-18px">Turhistorikk</li></a>
+              <a href="#" class="link"><li class="box-card h4-400-18px">Betalingskort</li></a>
+              <a href="#" class="link"><li class="box-card h4-400-18px">Betalinger</li></a>
+              <a href="#" class="link"><li class="box-card h4-400-18px">Innstillinger</li></a>
+          </ul>
+          <img class="blue-logo" src="./assets/Icons/newLogo.svg" alt="Ride logo">
+      </nav>
+  </div>
+
+  <div class="weatherNav">
+      <section class="container">
+          <div id="weather-icon" class="settings" alt="Værmelding ikon"></div>
+          <span class="weather-content"></span>
+         
+          <img class="swimming-icon" src="./assets/Icons/waterTemp.svg" alt="Værmelding ikon for badetempretatur">
+          <p id="average-beaches-temp"></p>
+          <section id="app"></section>
+          
+      </section>
+  </div>
+
+  <div class="pop-up-box hidden">
+      <button id="close-pop"><img src="./assets/Icons/close2.svg" aria-label="Lukk popup boks med info. om stasjon"></button>
+  </div>
+
+  <main id="map"></main>
+
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    
+    <script type="module" src="./js/app.js" async></script>
+  </body>
+</html>
